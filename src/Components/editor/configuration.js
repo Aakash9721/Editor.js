@@ -1,4 +1,6 @@
 import React from "react";
+import Header from "@editorjs/header";
+import List from "@editorjs/list";
 
 const configuration = () => {
   return {
@@ -13,6 +15,16 @@ const configuration = () => {
     /* Similar to onReady callback, you can use the onChange callback to handle any modifications inside the Editor: */
     onChange: (api, event) => {
       console.log("Now I know that Editor's content changed!", event);
+    },
+    tools: {
+      header: {
+        class: Header,
+        inlineToolbar: ["link"],
+      },
+      list: {
+        class: List,
+        inlineToolbar: true,
+      },
     },
     autofocus: true,
     data: {
