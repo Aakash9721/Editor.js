@@ -1,6 +1,7 @@
 import React from "react";
 import Header from "@editorjs/header";
 import List from "@editorjs/list";
+import SimpleImage from "./simple-image";
 
 const configuration = () => {
   return {
@@ -25,6 +26,7 @@ const configuration = () => {
         class: List,
         inlineToolbar: true,
       },
+      image: SimpleImage,
     },
     autofocus: true,
     data: {
@@ -49,6 +51,12 @@ const configuration = () => {
           type: "paragraph",
           data: {
             text: "sdfgdsfhsfdhfsh",
+          },
+        },
+        {
+          type: "image",
+          data: {
+            url: "https://cdn.pixabay.com/photo/2017/09/01/21/53/blue-2705642_1280.jpg",
           },
         },
       ],
