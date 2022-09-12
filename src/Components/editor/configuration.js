@@ -1,68 +1,72 @@
 import React from "react";
-import Header from "@editorjs/header";
-import List from "@editorjs/list";
 import SimpleImage from "./simple-image";
 
-const configuration = () => {
+const Configuration = () => {
   return {
     /**
-     * Id of Element that should contain the Editor
+     * Id of Element that should contain Editor instance
      */
     holder: "editorjs",
+    autofocus: true,
 
-    onReady: () => {
-      console.log("This is ready");
-    },
-    /* Similar to onReady callback, you can use the onChange callback to handle any modifications inside the Editor: */
-    onChange: (api, event) => {
-      console.log("Now I know that Editor's content changed!", event);
-    },
+    /**
+     * Available Tools list.
+     * Pass Tool's class or Settings object for each Tool you want to use
+     */
     tools: {
-      header: {
-        class: Header,
-        inlineToolbar: ["link"],
-      },
-      list: {
-        class: List,
+      image: {
+        class: SimpleImage,
         inlineToolbar: true,
       },
-      image: SimpleImage,
     },
-    autofocus: true,
+    /**
+     * Previously saved data that should be rendered
+     */
+    //  onReady: () => {
+    //     console.log('Editor.js is ready to work!')
+    //  },
+    //  onChange: (api, event) => {
+
+    //     console.log('Now I know that Editor\'s content changed!', event)
+    // },
     data: {
-      time: 1662815552000,
+      time: 1643195431504,
       blocks: [
         {
-          id: "RKyOw3Q-Rb",
+          id: "o72AO0sY-1",
           type: "paragraph",
           data: {
-            text: "dgsfgfhfh",
+            text: "sdjcvdhsvcdsghvchgdsvghcds",
           },
         },
         {
-          id: "9OzsDqYiDS",
+          id: "6LPs8gr9-a",
           type: "paragraph",
           data: {
-            text: "fhsfhsfhfsh",
+            text: "vhjsbdjvbhjdbvjhdhsbvjhdbjfvdv",
           },
         },
         {
-          id: "ywaKZLbdIN",
+          id: "c5vaZWuzj8",
           type: "paragraph",
           data: {
-            text: "sdfgdsfhsfdhfsh",
+            text: "fdjkbdjfjbvfdkbvfdnkbnkfdbfd",
           },
         },
         {
           type: "image",
           data: {
-            url: "https://cdn.pixabay.com/photo/2017/09/01/21/53/blue-2705642_1280.jpg",
+            url: "https://picsum.photos/500/300?random=1",
+            caption: "Here is a caption field",
+            withBorder: false,
+            withBackground: true,
+            stretched: false,
           },
         },
       ],
-      version: "2.25.0",
+      version: "2.22.2",
     },
   };
 };
 
-export default configuration;
+export default Configuration;
